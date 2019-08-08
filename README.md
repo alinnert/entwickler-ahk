@@ -2,7 +2,7 @@
 
 Ein [AutoHotKey](https://www.autohotkey.com/)-Skript für Software- und Web-Entwickler.
 
-*EN: This repo is in German because it mostly makes sense on German QWERTZ keyboard layouts. Feel free to fork it and translate it to other kayboard layouts.*
+> EN: This repo is in German because it mostly makes sense on German QWERTZ keyboard layouts. Feel free to fork it and translate it to other kayboard layouts.
 
 ## Erklärung
 
