@@ -6,7 +6,7 @@ Ein [AutoHotKey](https://www.autohotkey.com/)-Skript für Software- und Web-Entw
 
 ## Erklärung
 
-Dieses AHK-Skript macht `CapsLock` und die `< > |`-Taste unten links zu weiteren Modifiern.
+Dieses AHK-Skript macht `CapsLock` und die `<`-Taste unten links zu weiteren Modifiern.
 
 `CapsLock` gibt Zugriff auf Steuerfunktionen, z. B. Pfeiltasten, Lautstärke- und Mediensteuerung und einfacheren Zugriff auf Kontextmenüs, `Entf`, `Einf` etc.
 
