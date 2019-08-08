@@ -1,5 +1,5 @@
 ; Das Entwickler-AHK
-; Source: https://gist.github.com/alinnert/a4f3868e10eafcfe6b4684dca3f79dfc
+; GitHub: https://github.com/alinnert/entwickler-ahk
 
 ; Create an invisible window. This is used to check if Capslock is being pressed.
 ; This window gets destroyd after Capslock has been released
