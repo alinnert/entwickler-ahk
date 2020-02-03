@@ -106,6 +106,12 @@ XButton1::Send !{Up}
 < & Up::Send {↑}
 < & Down::Send {↓}
 
+< & Space::
+  SendInput, {Space}
+  SendInput, {Space}
+  SendInput, {Left}
+Return
+
 ; Send [<] if only the [<] key and nothing else is pressed
 ;$*<::send {Blind}{<}
 
