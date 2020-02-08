@@ -106,14 +106,9 @@ XButton1::Send !{Up}
 < & Up::Send {↑}
 < & Down::Send {↓}
 
-< & Space::
-  SendInput, {Space}
-  SendInput, {Space}
-  SendInput, {Left}
-Return
-
 ; Send [<] if only the [<] key and nothing else is pressed
-;$*<::send {Blind}{<}
+; Uncomment if you want to use this behaviour
+; $*<::send {Blind}{<}
 
 
 
@@ -127,6 +122,12 @@ Return
 ^ & x::SendInput @mixin
 ^ & m::SendInput @media
 ^ & n::SendInput @include
+
+^ & Space::
+  SendInput, {Space}
+  SendInput, {Space}
+  SendInput, {Left}
+Return
 
 ; Send [^] if only the [^] key and nothing else is pressed
 $*^::send {Blind}{^}
