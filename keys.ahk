@@ -51,8 +51,8 @@ s::Send {LWin down}{LCtrl down}{Left}{LCtrl up}{LWin up}
 d::Send {LWin down}{Tab}{LWin up}
 
 ; Tab Controls
-c::Send {LCtrl down}{Tab}{LCtrl up}
-v::Send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+c::Send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+v::Send {LCtrl down}{Tab}{LCtrl up}
 
 ; Misc. system controls
 0::PrintScreen
