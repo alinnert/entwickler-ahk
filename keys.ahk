@@ -1,7 +1,8 @@
-; Das Entwickler-AHK
+﻿; Das Entwickler-AHK
 ; GitHub: https://github.com/alinnert/entwickler-ahk
 
-; Create an invisible window. This is used to check if Capslock is being pressed.
+; Create an invisible window.
+; This is used to check if Capslock is being pressed.
 ; This window gets destroyd after Capslock has been released
 $*Capslock::
 Gui, 99:+ToolWindow
@@ -24,33 +25,42 @@ u::Home
 o::End
 h::PgDn
 z::PgUp
+n::Send {LCtrl down}{Left}{LCtrl up}
++n::Send {LCtrl down}{LShift down}{Left}{LShift up}{LCtrl up}
+m::Send {LCtrl down}{Right}{LCtrl up}
++m::Send {LCtrl down}{LShift down}{Right}{LShift up}{LCtrl up}
 
 ; Media controls
-b::Volume_Down
-n::Volume_Up
-m::Volume_Mute
+f9::Volume_Mute
+f10::Volume_Down
+f11::Volume_Up
 r::Media_Play_Pause
 e::Media_Next
 w::Media_Prev
 q::Media_Stop
 
-; Browser controls, based on the Chrome OS keyboards
+; Browser controls, inspired by Chrome OS
 1::Browser_Back
 2::Browser_Forward
 3::Browser_Refresh
 4::Browser_Home
-0::PrintScreen
 
-; Windows 10 Desktop controls
-f::sendevent {LWin down}{LCtrl down}{Right down}{LWin up}{LCtrl up}{Right up}
-s::sendevent {LWin down}{LCtrl down}{Left down}{LWin up}{LCtrl up}{Left up}
-d::sendevent {LWin down}{Tab down}{Tab up}{LWin up}
+; Windows: Virtual Desktop
+f::Send {LWin down}{LCtrl down}{Right}{LCtrl up}{LWin up}
+s::Send {LWin down}{LCtrl down}{Left}{LCtrl up}{LWin up}
+d::Send {LWin down}{Tab}{LWin up}
+
+; Tab Controls
+c::Send {LCtrl down}{Tab}{LCtrl up}
+v::Send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
 
 ; Misc. system controls
+0::PrintScreen
 .::Insert
 Backspace::Delete
 Enter::AppsKey ; Context menu
 NumpadSub::Backspace
+Space::Send {Space}{Space}{Left}
 
 ; [Capslock] + Mouse actions
 MButton::^v ; Copy, Cut, Paste
@@ -105,32 +115,6 @@ XButton1::Send !{Up}
 < & Right::Send {→}
 < & Up::Send {↑}
 < & Down::Send {↓}
-
-; Send [<] if only the [<] key and nothing else is pressed
-; Uncomment if you want to use this behaviour
-; $*<::send {Blind}{<}
-
-
-
-^ & i::SendInput import
-^ & e::SendInput export
-^ & f::SendInput function
-^ & c::SendInput const
-^ & l::SendInput let
-^ & q::SendInput require
-^ & r::SendInput return
-^ & x::SendInput @mixin
-^ & m::SendInput @media
-^ & n::SendInput @include
-
-^ & Space::
-  SendInput, {Space}
-  SendInput, {Space}
-  SendInput, {Left}
-Return
-
-; Send [^] if only the [^] key and nothing else is pressed
-$*^::send {Blind}{^}
 
 
 
