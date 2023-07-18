@@ -26,7 +26,7 @@ WinExist("A")
 winWidth := A_ScreenWidth - 16
 winHeight := A_ScreenHeight - 50 - 16
 winX := 8
-winY := 8
+winY := 16
 WinRestore
 WinMove,,, winX, winY, winWidth, winHeight
 return
